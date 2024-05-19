@@ -1,5 +1,11 @@
 import os
 
-root_path = os.environ['github.workspace']
+def get_env(env_name):
+    try:
+        return os.environ[env_name]
+    except Exception as e:
+        print(e)
+        return "ERROR"        
 
-print(root_path)
+print(get_env('PWD'))
+print(get_env('github_workspace'))
