@@ -28,4 +28,5 @@ def print_file_tree(start_path, prefix=""):
             print(prefix + "├── " + item if not is_last else prefix + "└── " + item)    
 
 root_path = get_env('github_workspace')
+print(root_path)
 print_file_tree(root_path)
